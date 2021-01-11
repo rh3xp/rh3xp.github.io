@@ -4856,7 +4856,7 @@ sup {
 }
 
 .header .site-title {
-    font-size: 50px;
+    font-size: 35px;
     display: block;
     line-height: 1;
     color: #fff
@@ -4885,6 +4885,13 @@ sup {
 
 .header-links {
     margin: 10px
+}
+
+.custom-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
 }
 
 .header-links .link {
