@@ -3,8 +3,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<meta property="og:title" content="mv $LIFE /dev/null"/>
+		<meta property="og:description" content="A blog maintained by thenerdsuperuser."/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="https://www.thenerdsuperuser.xyz"/>
+		<meta property="og:image" itemprop="image" content="https://camo.githubusercontent.com/b81ac2eb2333f5c7d9601d849873f865c6e86b4f/68747470733a2f2f692e6962622e636f2f5a3231665873562f57686174732d4170702d496d6167652d323032302d30382d30332d61742d312d31392d31392d414d2e6a7067"/>
+		<meta property="og:image:secure_url" itemprop="image" content="https://camo.githubusercontent.com/b81ac2eb2333f5c7d9601d849873f865c6e86b4f/68747470733a2f2f692e6962622e636f2f5a3231665873562f57686174732d4170702d496d6167652d323032302d30382d30332d61742d312d31392d31392d414d2e6a7067"/>
+		<meta property="og:image:type" content="image/jpeg" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@vimoveremacs" />
+		<meta name="twitter:creator" content="@vimoveremacs" />
+
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<!--- Favicon-->
+	<link rel="icon" type="image/png" href={{ "../assets/img/favicon.png" | relative_url }} sizes="16x16">
 
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 </head>
