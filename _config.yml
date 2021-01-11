@@ -1,17 +1,18 @@
 # Site settings
 title: Parth Krishna
-description: A blog about lorem ipsum dolor sit amet
+description: My portfolio website
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 # url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 baseurl: ""
 url: https://thenerdsuperuser.xyz
 
 # User settings
-username: thenerdsuperuser
+username: Parth Krishna
 user_description: Content is written in Markdown. Plain text format allows me to focus on my content. I am planning to use the JAM Stack.
 user_title: Software Developer
 email: thenerdsuperuser@gmail.com
 twitter_username: vimoveremacs
+linkedin_username: parthkrishna
 github_username:  thenerdsuperuser
 # gplus_username:  lorem_ipsum
 
