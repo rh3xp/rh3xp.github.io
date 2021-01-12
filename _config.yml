@@ -14,10 +14,9 @@ email: thenerdsuperuser@gmail.com
 twitter_username: vimoveremacs
 linkedin_username: parthkrishna
 github_username:  thenerdsuperuser
-# gplus_username:  lorem_ipsum
 
 # Google-analytics
 google-analytics:
-  id: ""
+  id: "G-JSY9XJRWQK"
 
 exclude: ['package.json', 'src' , 'node_modules']
