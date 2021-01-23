@@ -4,9 +4,9 @@ https://keybase.io/thenerdsuperuser
 
 I hereby claim:
 
-  * I am an admin of https://thenerdsuperuser.github.io
+  * I am an admin of https://thenerdsuperuser.xyz
   * I am thenerdsuperuser (https://keybase.io/thenerdsuperuser) on keybase.
-  * I have a public key with fingerprint 8742 0A5D 7747 2668 C445  9526 807F BB8E 4DC7 9316
+  * I have a public key with fingerprint 770C 0A4C EB9E 48F5 AC68  460B 644F 3F23 2A33 8F27
 
 To do so, I am signing this object:
 
@@ -14,24 +14,34 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "012029ac5d3e9becc0eccf98973142afb8c3cd1772b105b2f80d567311c814d8ffd70a",
-      "fingerprint": "87420a5d77472668c4459526807fbb8e4dc79316",
+      "fingerprint": "770c0a4ceb9e48f5ac68460b644f3f232a338f27",
       "host": "keybase.io",
-      "key_id": "807fbb8e4dc79316",
-      "kid": "0101c5d5ddd743a679b2cb942335ff8779d99b49c2b2f3462f9ede8f76de7fa0313d0a",
+      "key_id": "644f3f232a338f27",
+      "kid": "0101e7956b69b7c313b8912ff17f9ec03094de639b2cbbbb6bad8d4c14a98f4ebabe0a",
       "uid": "fa13aad5362c932063d065abd4d20719",
       "username": "thenerdsuperuser"
     },
+    "merkle_root": {
+      "ctime": 1611423862,
+      "hash_meta": "d54173aa1328822874924e868fd6945efd04682372303d8d6dee56acd87b075d",
+      "seqno": 18883431
+    },
+    "revoke": {
+      "sig_ids": [
+        "7ac8d93c6294a27acb9a1a6e786c2f29ec277a5dd24dea5ecf573ac9d895d33d0f"
+      ]
+    },
     "service": {
-      "hostname": "thenerdsuperuser.github.io",
+      "hostname": "thenerdsuperuser.xyz",
       "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1588862523,
+  "ctime": 1611423868,
   "expire_in": 157680000,
-  "prev": "4f05f89d3ffea55abe89913e8d886d67b6d93836ca96dbc6a027e5356eadf7e2",
-  "seqno": 24,
+  "prev": "2fa0ea3bd97e021f2f737e8beb83837ea7ca5b94f6b96f0960dda3e8a9f94450",
+  "seqno": 45,
   "tag": "signature"
 }
 
@@ -41,30 +51,33 @@ which yields the signature:
 Version: Keybase OpenPGP v2.1.13
 Comment: https://keybase.io/crypto
 
-yMN2AnicdVJ9UFRVFF8+RMSwRSaJaPh4EFoxzvt+70IgJYF8DhAfpeD23rv3LU9g
-d9l9ixJhsBODOlSMW0E0CQ0MNJpQsDuK0CikmTGpGROjiFOBUqMpViM6ifSW8r+6
-M3fu3HN+v9/5nTPnZKCPLsCr/o3ht7NPO9d5jY/22XXbXeEJtZhohjVYfC1WjpYf
-VAGRTTWUKxCLx3CCxEkgSAykEBCRJOHalQEPOIqgSUEWeYmSIMFxpEjgjEjKPA4Z
-VksSEk/QkJdlyOECFofJismIrBarYlI1WZ6jSVxgIMfRHMmyvETTDGBIlsc5WRR5
-REOJAxTBasQys83D0MyJgg1tVMxaTPsYlu39B/6hb5zQTDMQQo6mBJYDIimJgCYp
-ipFlnuMABECkgURqnimaJWWAIOJljoWIkwWcIii47Nu+LCcLBCUIkKFYUgIUibNa
-lmUEEdKQxDkCeIA2ZDUJlUhDq2XIhKzQZrcgqyeM1cVh2lOtSMgzYE9H/4PcaFTU
-Mrv4T5cWq1k1S+YKDVemqhZbvEdHrbF4iDuRaPhX0iAqJqhNV2NUI6tNMZuweEJD
-SqriqUEwPM+zJENScRjaZVGsyKB4EAynTVs7njqoWpOkZZyReQApWUYCozWHeAAI
-CvFQ40OWE1kIKJ5iJQGwUJRYASc5xFAMiwQoc4jEPE1WmcxYPElrPgWjpmlTjCZB
-tVsRVjc2WuKr8wrQ+a3w9qydLmCV/uEy3r//6FKKOhT81uc/6C+F7Kxqck5cCMyQ
-wzOSbm4ZMbYfcxcKz9zuiQq9cTfkMtvZ2dx4+PyOs1mPldxeSAcinn9lSt7nMp25
-d9zP7WSuCW2TX8UW9eypGBs+9Ofcoe6SGFoccx+dNce1Lo37J5Z8EF23YSbtzqCr
-6tpzLxYXNE+t7iCxlJtdYa+kbnaZv2AChaSmzMAT0pf9uy99PKef8H39TTpiqj95
-S7L958OnhLBfskIT8qivv3/tYG7XUyNsYUhBVsmaFWMDT/dsO57ENm1aKj0/ZPd5
-5NviRLRyZj7T0ettc9ORB3ZP9C7EPFiU2tV9wXv65iY6+YbfT7rDclzODz9NuXO3
-PPujUlmfcMo/susFb7+rrtnvzn1zInycvjIY1fab26+jPbdoztfR2fpkkdXZNnd0
-Jt+RV6rvDxrcH1NZEAymiyc/cYe2SLl9m/MzV0fk1ycrEbOnF/TviN29WcWzF3/t
-en4d/l7DLeAwLlb+cSStce2YLupWb0Z2wuPNZjJ95uWQDanRecMvCZuw+Wn/kMuv
-Opul5q0t/gEDkWtqlIb17bVJNDiS+JN90gBYx9XWCnyocVSFLQe954Ns7+f0j57t
-HYi9fv2zbd0jOVv3Lvo/8Fn/I/jrAjzjiH3XsGN72q6gvOrCG8eGp/2emIu+V7/g
-WJn27LnOiwdSO2rT93t1rapcG/U3gn/Ebw==
-=IShv
+yMP+AnicdZMLbBRFHMavQGkoBRqVtASDsGCI0pTdmd3ZmfIKUClKIthYESu5zu7M
+9I7jHt17lNJWrEKoQZSngqSCD4QWDBUUIVRIC5SACkkDJDQSalNCLZBQHgINpc42
+EhOjm2x2Z/b7f/9vfjtzYthAT2oSmz9j/Ivw44lJPzetjnuK0ooqyhUrzMqUnHIl
+wPsffCnj0Zg34GdKjqJqQAWE2gaDnFjctlV5C4KJCTUdUGFhG9pMM01gaaphAYFV
+ZiD5UbOxpjMsBDNVqmQpwh8q5k7E8Ydi0tY0VVulus0twnUsDGojrCPVQrouoAAQ
+UAixAKYs9IWjboUMZ9Eoz/aH5ZwcePvj/Yf+SW5V4yYxkIWIZdpQgxYmGhBCMwXh
+tgpVojOOILGAbckLWZRhptuaTgkWOreoxftzx/vtBNUgpcyACNgEAhVBpiKDWkxn
+QDU14gqj3AnRIJfqmI+HuMOi8Qh33GmlMksJciewlHudcDjmQrZjfleqIU1ihBgB
+uVAa9XmDPEalAzN0zZQdNQgwBgCbOgE6xwgLhohucMFUHWEATQBVKIMjxrmBqM2w
+aammwWSeKC8JhWUHjDHUoSYjODwRDnC3e9RfLPlFlZxCxaQ2ZgTaCBCdAjmyCNUo
+4iZGNhBAsgKmSQ3GgORFDW4LQwazCcNE7gmJQSiLK91uTsJv95u7P+x/QGQvK1su
+o0WccCxsh5dKhS8Wi0RzXECxsohbUsot799mXssfYnLbyIoEd6L+cEguRyr/zQ5n
+KXxZxO9wr99VGCbCqrzcPjwhLYGgKqfQYsTkKtAEECY0Oba4hSGWb9S0qWERXSCL
+IKESpDJGIceUCKLrhvoPTN2QOWmx9JQEQzQWd7hS2dT49iBPUqpncPIA9zx5Uoek
+PzllE79K99R5Hho9nfm7d9wa1JH3OTl4tfDe+a3LzZRVz2+Mjwy94duaeGFswYP6
+OD1e5GQUXFOUux0VqKm34dJFWr2rZS1rP7ylaMuJ+nprWytnKzYNvRXMu9DVvfIg
+jEy+e+BA+ZiyYE3GKzcnZdpo8L6Xp2zcfPaXcWNK9xwZ3z7mkN71YYqveu681cNp
+UXHLmWMa7Kn6hnXSYRd751Y/Nzot95q6cua4wMjG240bDlf8kPp768mVeacf2Q0T
+Ss5OnvTdgrZMMD6RcmPHw/J3YF07XTM2+/2px5r0qtzMzO9Pda3fOarg3f2L9vH8
+4IPGz2bG78xOaz9f2Vf1aV1S4aZZZnXNqOZ1v844c791b6KttznZOz+t4c1gzRdr
+PRmzYr7J3d2tb90cEVj/0k9V5zpGr3lcEl539NnrDVcelWf/FhFkdqhNpK/ZtGt4
+n3K1evTFr4NXCvriN+bk1la0TFyYWrS59nh6b/L9bae35oPa15822Lqj2/IWXm8+
+m1b3sHDGsPLH2aMy82d/9Mx079qMnI7tewN7xJTOebmnivdfGLJ89x/RRdf2nU6e
+FKEDQX7lveNd3z7QjpRMG/Da6p7STzYe67hau6H+pNh5+9LmcQNCffMeTw2ca+v5
+c4XnzjTvlrRVKZdbLq+YXrp4zpL7259aMnPnrqE27oxNGPnjlGmDlh068d6XWXvR
+B83RuSOOvkoW1PC/AJaOCHE=
+=o525
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
@@ -73,4 +86,3 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/thenerdsuperuser
 
 ==================================================================
-
