@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/thenerdsuperuser
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://thenerdsuperuser.xyz
+  * I am thenerdsuperuser (https://keybase.io/thenerdsuperuser) on keybase.
+  * I have a public key with fingerprint 770C 0A4C EB9E 48F5 AC68  460B 644F 3F23 2A33 8F27
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012029ac5d3e9becc0eccf98973142afb8c3cd1772b105b2f80d567311c814d8ffd70a",
+      "fingerprint": "770c0a4ceb9e48f5ac68460b644f3f232a338f27",
+      "host": "keybase.io",
+      "key_id": "644f3f232a338f27",
+      "kid": "0101e7956b69b7c313b8912ff17f9ec03094de639b2cbbbb6bad8d4c14a98f4ebabe0a",
+      "uid": "fa13aad5362c932063d065abd4d20719",
+      "username": "thenerdsuperuser"
+    },
+    "service": {
+      "hostname": "thenerdsuperuser.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1611424083,
+  "expire_in": 157680000,
+  "prev": "b270cbe7b38650a2d7bb33ed3367e7ab915fa68405aff2a327146fa93e974a9a",
+  "seqno": 47,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMN5AnicdVJ7UFRVGAdZUFcQEHQ0iZEb8mg2uq+9j52C0RmTTCyyGVKs7Zx7z91d
+WXeXfbAgIiMhOuaIYNJjKIXGxAAHa8fXwCANBLSMOYgwRSkGLVPCQCGFEtBZJv+r
+M3Pmm/Od3/c7v/P7vvawoAB1oPxq2jPPMuWJgd62OlfAO6FgZyEBrXIBoSskctBi
+QGYZOZz6HJNM6AiSoklaBJJWZpAIkSSReCuiIPIMxdJAgYLESDLF8zSkSC2kFYGU
+tRy+pCSBYmVBUWSeBISGUEwWA7Lb7CaLE9PyPCmRgJUQFBErKFogcQLLkZBjWYVR
+aIYGDCMoNI8LjVaHvwKLg8CBUkxWnMMH/aK8/8A/0U1SiBe1HOREyEsMxUBBpGhF
+oXhFRBLJkCIrI44RIS1BvDgIZEFmJYoFoqCwCAKIFnW7FukUQDEAyFqGoyWRoUmO
+kUlOC6DMyjTJU6If6EB2C9iHMNppRBZklx0uG7L700SRhsAhzyQhv8H+H/0PMiW/
+YD/mstmtTqtkNWOE0em0OXR+BmeBzV/iRlD/L5kemiwy9hVX5CG7w2S1EDoKIyWn
+yc9OcRTuEUsKjIZA+TaTHelNfoSW5wQSL/87KA9TQhq3AyIeMgKnJQEt8xAyDJIZ
+huMRD6BIaRWAG0RqgaJgq2meYjkFiHgkeOyX3yYHyrVYCR3LY53AgDkdJoMFOF12
+RBR93bZHFRCoDggJXuIfuAD18ognYxh+J3w+4dzpUy297bvq3NNXw6bmWv7ozNaH
+pn80Gr0xroPqabq4v25D5/RA3Ftdo2kj+XVPH+FmNA9vNUxsrCkjCz43lGzRt37n
+KrrsG/vdt3THo869a/uienPCV5ac6cuMrMq8GjR+iU0ojwwpOrViR5Q70Hhr3TB3
+KHZ1cpbni7C728ard3+fqjnzzcSgObd+ZGhf+pfnVK2HiJ22vauCgpNfSqrsD+0u
+/8HizT3Zuf1hxEyT4w2fZ+jmnvmy4anemNqGlKb7zoPbaiLPG0DibLje3Trb2Tf0
+U+Xg4zuqBTrwwOubvl0RMv/L1jh74XDlxHPjjcnKEu+VEV9C48cvmDMqarzR4O/k
+WJVyYbI8tWLzvZ63p2r7N5d29x6bPjhjiaauVRQVZx6fTe0l8x7FZl03hFQ1f9jm
+yUyvtZu3/vrJ5CsDVX81t2yfNDve0+vM6P0IJm29yujpb+ruU853JDo3lBy+G/Nu
+48tZrUNpD1B/8ZWLt8vmfsu5P/b8BHfguPWD0vbI4sKvIqTD1R1R7cuS+qfc6sJd
+6qgbanfPyS2a0cHX1iZ4Tdfqm9HllS7LDblvtafsqPpx6c+3T6+Pf9N5ZGBZxsxn
+G168fjT/0xPZXWNPzXSpupcurIn31h/7Md6Y1HAieqHBePZe9vJ17rjdTHDMmA/c
+7MgS56oH8wvW/Lkq48ID3aWzm+I8vn8ArFLOpw==
+=Zkci
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/thenerdsuperuser
+
+==================================================================
