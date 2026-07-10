@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Parth Krishna | CV</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,10 @@
             :root {
                 --bg: #0d0d0d;
                 --panel: #141414;
-                --fg: #e8e8e8;
-                --muted: #9b9b9b;
-                --accent: #cfcfcf;
-                --border: #2b2b2b;
+                --fg: #d6d6d6;
+                --muted: #8a8a8a;
+                --border: #252525;
+                --accent: #9fc6ff;
             }
             * {
                 box-sizing: border-box;
@@ -29,44 +29,46 @@
                 font-family: "IBM Plex Mono", monospace;
                 line-height: 1.7;
             }
-            nav {
-                position: sticky;
-                top: 0;
-                background: rgba(13, 13, 13, 0.92);
-                backdrop-filter: blur(8px);
-                border-bottom: 1px solid var(--border);
-                padding: 18px 28px;
-            }
-            nav a {
-                color: var(--fg);
+            a {
+                color: var(--accent);
                 text-decoration: none;
             }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 28px 24px 16px;
+                border-bottom: 1px solid var(--border);
+            }
+            .navtop {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+            }
+            .links {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
             main {
-                max-width: 900px;
-                margin: auto;
-                padding: 48px 28px;
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 36px 24px;
             }
             header {
-                text-align: center;
-                border: 1px solid var(--border);
-                background: var(--panel);
-                padding: 34px;
-                margin-bottom: 40px;
+                margin-bottom: 42px;
             }
             h1 {
                 margin: 0;
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
-            .subtitle {
-                color: var(--muted);
-                margin-top: 6px;
-            }
-            .links {
-                margin-top: 12px;
+            .subtitle,
+            .meta {
                 color: var(--muted);
             }
             section {
-                margin-bottom: 42px;
+                margin: 40px 0;
             }
             h2 {
                 font-size: 1rem;
@@ -74,159 +76,142 @@
                 border-bottom: 1px solid var(--border);
                 padding-bottom: 8px;
                 margin-bottom: 18px;
-                letter-spacing: 0.08em;
-            }
-            p {
-                margin: 0.5rem 0;
-            }
-            ul {
-                padding-left: 22px;
-            }
-            li {
-                margin-bottom: 10px;
-            }
-            .skills p {
-                margin: 12px 0;
             }
             .job {
-                border: 1px solid var(--border);
-                background: var(--panel);
-                padding: 20px;
-                margin-bottom: 18px;
+                padding: 18px 0;
+                border-bottom: 1px solid var(--border);
             }
-            .jobhead {
+            .head {
                 display: flex;
                 justify-content: space-between;
-                gap: 20px;
+                gap: 16px;
                 flex-wrap: wrap;
-                margin-bottom: 12px;
             }
             .role {
                 font-weight: 600;
             }
             .company,
-            .loc,
             .date {
                 color: var(--muted);
             }
-            .footer {
-                margin-top: 50px;
+            ul {
+                padding-left: 20px;
+            }
+            li {
+                margin: 8px 0;
+            }
+            footer {
+                max-width: 720px;
+                margin: 60px auto 24px;
+                padding: 18px 24px 0;
+                border-top: 1px solid var(--border);
                 color: var(--muted);
-                text-align: center;
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
             @media (max-width: 700px) {
-                .jobhead {
+                .head {
                     flex-direction: column;
-                }
-            }
-            @media print {
-                body {
-                    background: #fff;
-                    color: #000;
-                }
-                nav {
-                    display: none;
-                }
-                .job,
-                header {
-                    border: 1px solid #aaa;
-                    background: #fff;
                 }
             }
         </style>
     </head>
     <body>
-        <nav><a href="index.html">&larr; rh3xp</a></nav>
+        <nav>
+            <div class="navtop"><a href="index.html">rh3xp</a></div>
+            <div class="links">
+                <a href="blog.html">journal</a>
+                <a href="#">lab</a>
+                <a href="cv.html">cv</a>
+                <a href="#">about</a>
+            </div>
+        </nav>
         <main>
             <header>
                 <h1>Parth Krishna</h1>
-                <div class="subtitle">Sr. Associate – Agentic AI</div>
-                <div class="links">
-                    linkedin.com/in/parthkrishna · Noida, India
+                <div class="subtitle">Sr. Associate — Agentic AI</div>
+                <div class="meta">
+                    Noida, India ·
+                    <a href="https://www.linkedin.com/in/parthkrishna/"
+                        >linkedin.com/in/parthkrishna</a
+                    >
                 </div>
             </header>
 
             <section>
                 <h2>Professional Summary</h2>
                 <p>
-                    Techno-functional Sr. Associate with 5+ years of experience
-                    bridging business requirements and technical delivery across
-                    AI, automation, and analytics. Currently driving Agentic AI
-                    initiatives by designing intelligent agent architectures and
-                    translating complex client requirements into AI-powered
-                    solutions.
+                    Techno-functional Senior Associate with 5+ years of
+                    experience bridging business requirements and technical
+                    delivery across AI, automation and analytics. Currently
+                    designing Agentic AI solutions and translating complex
+                    client requirements into production-ready intelligent
+                    systems.
                 </p>
                 <p>
-                    Experienced across the end-to-end solution lifecycle with
-                    Microsoft Power Platform, Python, SQL, Generative AI, and
-                    consulting engagements across Operations, Finance,
-                    Healthcare, and ESG.
+                    Experienced across the complete solution lifecycle with
+                    Microsoft Power Platform, Python, SQL, Generative AI and
+                    consulting engagements spanning Operations, Finance,
+                    Healthcare and ESG.
                 </p>
             </section>
 
-            <section class="skills">
+            <section>
                 <h2>Skills</h2>
                 <p>
-                    <strong>Techno-Functional:</strong> Business Requirements
-                    Gathering · Process Gap Analysis · Transformation Design ·
-                    Technical Design Review
+                    <strong>Techno-Functional</strong> — Business Requirements ·
+                    Process Analysis · Transformation Design · Technical Reviews
                 </p>
                 <p>
-                    <strong>Agentic AI & GenAI:</strong> AI Builder · LLM
-                    Orchestration · Agent Design · Multi-Agent Workflows · RAG ·
-                    Chatbots
+                    <strong>Agentic AI</strong> — LLM Orchestration · AI Builder
+                    · Multi-Agent Systems · RAG · Chatbots
                 </p>
                 <p>
-                    <strong>Platforms:</strong> Microsoft Power Platform ·
-                    Python · SQL · APIs · CI/CD · Git · Linux · MS Visio
+                    <strong>Platforms</strong> — Microsoft Power Platform ·
+                    Python · SQL · APIs · Git · Linux · CI/CD
                 </p>
-                <p><strong>Frameworks:</strong> Agile Scrum · Lean Six Sigma</p>
+                <p>
+                    <strong>Frameworks</strong> — Agile Scrum · Lean Six Sigma
+                </p>
             </section>
 
             <section>
                 <h2>Experience</h2>
 
                 <div class="job">
-                    <div class="jobhead">
+                    <div class="head">
                         <div>
                             <div class="role">Senior Associate</div>
                             <div class="company">PwC · Noida</div>
                         </div>
-                        <div class="date">Sep 2025 – Present</div>
+                        <div class="date">Sep 2025 — Present</div>
                     </div>
                     <ul>
                         <li>
                             Built the Global Leadership AI Agent Control Tower
-                            in Microsoft Power Platform governing 20+ AI agents,
-                            reducing oversight effort by ~40% and improving
-                            escalation response by 60%.
+                            governing 20+ deployed AI agents.
                         </li>
                         <li>
                             Delivered an AI-powered Finance Insights platform
-                            saving ~200 FTE hours/month and reducing invoice
-                            resolution TAT by 65%.
+                            saving ~200 FTE hours/month.
                         </li>
                         <li>
-                            Led global requirements workshops, authored BRDs and
-                            functional specifications, accelerating solution
-                            delivery by 30%.
+                            Led global stakeholder workshops, BRDs and
+                            transformation design.
                         </li>
                         <li>
-                            Reviewed technical designs, identified functional
-                            gaps pre-development, and supported UAT with zero
-                            critical post-go-live defects.
+                            Supported UAT and technical reviews with zero
+                            critical production defects.
                         </li>
                     </ul>
                 </div>
 
                 <div class="job">
-                    <div class="jobhead">
+                    <div class="head">
                         <div>
                             <div class="role">Business Analyst</div>
                             <div class="company">Genpact · Gurugram</div>
                         </div>
-                        <div class="date">Dec 2022 – Sep 2025</div>
+                        <div class="date">Dec 2022 — Sep 2025</div>
                     </div>
                     <ul>
                         <li>
@@ -234,46 +219,37 @@
                             improving process efficiency by 98%.
                         </li>
                         <li>
-                            Led digital transformation for Headcount Movement
-                            and Demand Generation workflows.
+                            Led enterprise workflow digitization and dashboard
+                            initiatives.
                         </li>
                         <li>
-                            Automated reporting pipelines with Python improving
+                            Automated reporting pipelines with Python reducing
                             TAT by 96%.
                         </li>
                         <li>
                             Designed PowerApps, AI Builder and Power BI
-                            solutions generating business impact exceeding
-                            $40,000.
-                        </li>
-                        <li>
-                            Developed enterprise Python automation for dashboard
-                            integrity monitoring and proactive notifications.
+                            solutions producing measurable business impact.
                         </li>
                     </ul>
                 </div>
 
                 <div class="job">
-                    <div class="jobhead">
+                    <div class="head">
                         <div>
                             <div class="role">Senior Associate</div>
                             <div class="company">Genpact · Gurugram</div>
                         </div>
-                        <div class="date">Feb 2021 – Nov 2022</div>
+                        <div class="date">Feb 2021 — Nov 2022</div>
                     </div>
                     <ul>
+                        <li>Supported EMEA Procure-to-Pay operations.</li>
                         <li>
-                            Supported EMEA Manufacturing Operations across
-                            Procure-to-Pay processes.
+                            Improved Accounts Payable workflows and On-Time
+                            Delivery.
                         </li>
                         <li>
-                            Engineered Accounts Payable workflows improving
-                            On-Time Delivery by 22%.
-                        </li>
-                        <li>
-                            Built Python Data Quality and RAG framework enabling
-                            forecasting and natural-language operational
-                            insights.
+                            Built Python data quality and RAG tooling for
+                            operational insights.
                         </li>
                     </ul>
                 </div>
@@ -282,10 +258,9 @@
             <section>
                 <h2>Education</h2>
                 <p>
-                    <strong>PES University</strong><br />B.Tech, Computer
-                    Science (Systems Design & Algorithms)<br /><span
-                        class="company"
-                        >2016 – 2020 · Bengaluru</span
+                    <strong>PES University</strong><br />B.Tech Computer Science
+                    (Systems Design & Algorithms)<br /><span class="meta"
+                        >2016–2020 · Bengaluru</span
                     >
                 </p>
             </section>
@@ -293,13 +268,29 @@
             <section>
                 <h2>Certifications</h2>
                 <p>
-                    Six Sigma Lean Certified · Lean Green Belt Certified ·
-                    Dataiku Core Designer & ML Practitioner · Google Cloud
-                    Digital Leader
+                    Six Sigma Lean · Lean Green Belt · Dataiku Core Designer &
+                    ML Practitioner · Google Cloud Digital Leader
                 </p>
             </section>
-
-            <div class="footer">Designed in a minimalist monospaced style.</div>
         </main>
+
+        <footer>
+            <div>Last updated: <span id="ts"></span></div>
+            <div>
+                <a
+                    href="https://github.com/rh3xp/rh3xp.github.io/commits/main/"
+                    target="_blank"
+                    >Repository commit history</a
+                >
+            </div>
+            <div style="margin-top: 10px">
+                "Building in public, one rabbit hole at a time."
+            </div>
+        </footer>
+        <script>
+            document.getElementById("ts").textContent = new Date(
+                document.lastModified,
+            ).toLocaleString();
+        </script>
     </body>
 </html>

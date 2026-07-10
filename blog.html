@@ -1,279 +1,153 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>rh3xp - Blog</title>
-
-        <!-- Google Font -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Journal</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
             rel="stylesheet"
         />
-
         <style>
             :root {
-                --bg-color: #12121b;
-                --card-bg: #1e1e2e;
-                --text-primary: #e2e2f0;
-                --text-secondary: #a5a5ba;
-                --accent-color: #a799ff;
-                --border-color: #2e2e48;
-                --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-                --radius: 12px;
+                --bg: #0d0d0d;
+                --panel: #141414;
+                --fg: #d6d6d6;
+                --muted: #8a8a8a;
+                --border: #252525;
+                --accent: #9fc6ff;
             }
-
             * {
-                margin: 0;
-                padding: 0;
                 box-sizing: border-box;
-                font-family: "Reenie Beanie", cursive;
             }
-
             body {
-                background: var(--bg-color);
-                color: var(--text-primary);
-                min-height: 100vh;
-                line-height: 1.5;
+                margin: 0;
+                background: var(--bg);
+                color: var(--fg);
+                font-family: "IBM Plex Mono", monospace;
+                line-height: 1.7;
             }
-
-            /* ================= NAVBAR ================= */
-
-            .navbar {
-                background: rgba(30, 30, 46, 0.85);
-                backdrop-filter: blur(12px);
-                border-bottom: 1px solid var(--border-color);
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 32px;
-                position: sticky;
-                top: 0;
-                z-index: 100;
-            }
-
-            .logo {
+            a {
+                color: var(--accent);
                 text-decoration: none;
-                color: var(--accent-color);
-                font-size: 3.2rem;
-                transition: 0.2s;
             }
-
-            .logo:hover {
-                color: white;
+            a:hover {
+                text-decoration: underline;
             }
-
-            .nav-links {
-                display: flex;
-                list-style: none;
-                gap: 30px;
+            nav {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 28px 24px 16px;
+                border-bottom: 1px solid var(--border);
             }
-
-            .nav-links a {
-                text-decoration: none;
-                color: var(--text-secondary);
-                font-size: 2.3rem;
-                transition: 0.2s ease;
-            }
-
-            .nav-links a:hover {
-                color: white;
-                transform: rotate(-3deg);
-            }
-
-            /* ================= MAIN ================= */
-
-            .main-content {
-                max-width: 900px;
-                margin: auto;
-                padding: 60px 20px;
-            }
-
-            .page-title {
-                font-size: 4.5rem;
-                color: white;
-                margin-bottom: 8px;
-                font-weight: normal;
-            }
-
-            .page-subtitle {
-                font-size: 2rem;
-                color: var(--text-secondary);
-                margin-bottom: 45px;
-            }
-
-            /* ================= POSTS ================= */
-
-            .blog-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-            }
-
-            .blog-card {
-                display: block;
-                text-decoration: none;
-                color: inherit;
-                background: var(--card-bg);
-                border: 1px solid var(--border-color);
-                border-radius: var(--radius);
-                padding: 30px;
-                box-shadow: var(--shadow);
-                transition: 0.2s ease;
-            }
-
-            .blog-card:hover {
-                transform: translateY(-3px);
-                border-color: var(--accent-color);
-            }
-
-            .blog-meta {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                color: var(--accent-color);
-                font-size: 1.6rem;
+            .navtop {
+                font-size: 1.4rem;
                 margin-bottom: 12px;
             }
-
+            .links {
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            main {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 36px 24px;
+            }
+            section {
+                margin: 36px 0;
+            }
+            h1 {
+                font-size: 2rem;
+                margin: 0 0 6px;
+            }
+            h2 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 8px;
+            }
+            .list article {
+                padding: 18px 0;
+                border-bottom: 1px solid var(--border);
+            }
             .date {
-                color: var(--text-secondary);
+                color: var(--muted);
+                font-size: 0.9rem;
             }
-
-            .dot {
-                width: 5px;
-                height: 5px;
-                border-radius: 50%;
-                background: var(--border-color);
-            }
-
-            .blog-card h2 {
-                font-size: 3rem;
-                color: white;
-                margin-bottom: 10px;
-                font-weight: normal;
-                transition: 0.2s;
-            }
-
-            .blog-card:hover h2 {
-                color: var(--accent-color);
-            }
-
-            .blog-card p {
-                font-size: 1.9rem;
-                color: var(--text-secondary);
-            }
-
-            @media (max-width: 768px) {
-                .navbar {
-                    flex-direction: column;
-                    gap: 15px;
-                }
-
-                .nav-links {
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 18px;
-                }
-
-                .logo {
-                    font-size: 2.8rem;
-                }
-
-                .nav-links a {
-                    font-size: 2rem;
-                }
-
-                .page-title {
-                    font-size: 3.8rem;
-                }
-
-                .page-subtitle {
-                    font-size: 1.8rem;
-                }
-
-                .blog-card h2 {
-                    font-size: 2.6rem;
-                }
-
-                .blog-card p {
-                    font-size: 1.7rem;
-                }
-
-                .blog-meta {
-                    font-size: 1.4rem;
-                }
+            footer {
+                max-width: 720px;
+                margin: 60px auto 24px;
+                padding: 0 24px;
+                color: var(--muted);
+                font-size: 0.85rem;
+                border-top: 1px solid var(--border);
+                padding-top: 18px;
             }
         </style>
     </head>
-
     <body>
-        <nav class="navbar">
-            <a href="index.html" class="logo">rh3xp</a>
-
-            <ul class="nav-links">
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="#">experience</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">about</a></li>
-            </ul>
+        <nav>
+            <div class="navtop"><a href="index.html">rh3xp</a></div>
+            <div class="links">
+                <a href="blog.html">journal</a>
+                <a href="#">lab</a>
+                <a href="cv.html">cv</a>
+                <a href="#">about</a>
+            </div>
         </nav>
-
-        <main class="main-content">
-            <h1 class="page-title">thoughts</h1>
-
-            <p class="page-subtitle">
-                documenting designs, code, and daily shifts in perspective.
+        <main>
+            <h1>journal</h1>
+            <p style="color: var(--muted)">
+                Thoughts, systems, experiments and notes.
             </p>
-
-            <div class="blog-grid">
-                <a href="#" class="blog-card">
-                    <div class="blog-meta">
-                        <span>Mood</span>
-                        <div class="dot"></div>
-                        <span class="date">Oct 14, 2026</span>
+            <div class="list">
+                <article>
+                    <div class="date">2026-07-11 · Projects</div>
+                    <a href="posts/building-kiln.html"
+                        ><strong>Building Kiln</strong></a
+                    >
+                    <div>
+                        Why I started building a local-first homelab control
+                        plane.
                     </div>
-
-                    <h2>a soft midnight palette</h2>
-
-                    <p>
-                        an exploration into choosing softer stark-contrast
-                        alternatives.
-                    </p>
-                </a>
-
-                <a href="#" class="blog-card">
-                    <div class="blog-meta">
-                        <span>Projects</span>
-                        <div class="dot"></div>
-                        <span class="date">Sep 28, 2026</span>
+                </article>
+                <article>
+                    <div class="date">2026-07-10 · AI</div>
+                    <a href="#"><strong>Designing Agentic AI</strong></a>
+                    <div>
+                        Patterns that emerged from enterprise implementations.
                     </div>
-
-                    <h2>micro-interactions</h2>
-
-                    <p>
-                        leveraging simplified UI adjustments, typography, and
-                        global scales.
-                    </p>
-                </a>
-
-                <a href="#" class="blog-card">
-                    <div class="blog-meta">
-                        <span>Experience</span>
-                        <div class="dot"></div>
-                        <span class="date">Aug 03, 2026</span>
-                    </div>
-
-                    <h2>lessons learned</h2>
-
-                    <p>
-                        striking the perfect balance between thoughtful design
-                        and performance.
-                    </p>
-                </a>
+                </article>
+                <article>
+                    <div class="date">2026-07-02 · Notes</div>
+                    <a href="#"><strong>Becoming a Polymath</strong></a>
+                    <div>Learning across disciplines with intent.</div>
+                </article>
             </div>
         </main>
+
+        <footer>
+            <div>Last updated: <span id="ts"></span></div>
+            <div>
+                Latest changes:
+                <a
+                    href="https://github.com/rh3xp/rh3xp.github.io/commits/main/"
+                    target="_blank"
+                >
+                    github.com/rh3xp/rh3xp.github.io/commits/main
+                </a>
+            </div>
+            <div style="margin-top: 10px">
+                "Building in public, one rabbit hole at a time."
+            </div>
+        </footer>
+        <script>
+            document.getElementById("ts").textContent = new Date(
+                document.lastModified,
+            ).toLocaleString();
+        </script>
     </body>
 </html>

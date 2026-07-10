@@ -1,201 +1,152 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>rh3xp</title>
-
-        <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
             rel="stylesheet"
         />
-
         <style>
             :root {
-                --bg-color: #12121b;
-                --card-bg: #1e1e2e;
-                --text-primary: #e2e2f0;
-                --text-secondary: #a5a5ba;
-                --accent-color: #a799ff;
-                --border-color: #2e2e48;
-                --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-                --radius: 12px;
+                --bg: #0d0d0d;
+                --panel: #141414;
+                --fg: #d6d6d6;
+                --muted: #8a8a8a;
+                --border: #252525;
+                --accent: #9fc6ff;
             }
-
             * {
-                margin: 0;
-                padding: 0;
                 box-sizing: border-box;
-                font-family: "Reenie Beanie", cursive;
             }
-
             body {
-                background: var(--bg-color);
-                color: var(--text-primary);
-                min-height: 100vh;
-                display: flex;
-                flex-direction: column;
-                line-height: 1.5;
+                margin: 0;
+                background: var(--bg);
+                color: var(--fg);
+                font-family: "IBM Plex Mono", monospace;
+                line-height: 1.7;
             }
-
-            /* Navbar */
-
-            .navbar {
-                background: rgba(30, 30, 46, 0.85);
-                backdrop-filter: blur(12px);
-                border-bottom: 1px solid var(--border-color);
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 14px 32px;
-                position: sticky;
-                top: 0;
-                z-index: 100;
-            }
-
-            .logo {
+            a {
+                color: var(--accent);
                 text-decoration: none;
-                color: var(--accent-color);
-                font-size: 3.2rem;
-                transition: 0.2s ease;
             }
-
-            .logo:hover {
-                color: white;
+            a:hover {
+                text-decoration: underline;
             }
-
-            .nav-links {
+            nav {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 28px 24px 16px;
+                border-bottom: 1px solid var(--border);
+            }
+            .navtop {
+                font-size: 1.4rem;
+                margin-bottom: 12px;
+            }
+            .links {
                 display: flex;
-                list-style: none;
-                gap: 30px;
+                gap: 20px;
+                flex-wrap: wrap;
             }
-
-            .nav-links a {
-                text-decoration: none;
-                color: var(--text-secondary);
-                font-size: 2.3rem;
-                transition: 0.2s ease;
+            main {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 36px 24px;
             }
-
-            .nav-links a:hover {
-                color: white;
-                transform: rotate(-3deg);
+            section {
+                margin: 36px 0;
             }
-
-            /* Main */
-
-            .main-content {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 40px 20px;
-            }
-
-            .container {
-                width: 100%;
-                max-width: 700px;
-            }
-
-            .card {
-                background: var(--card-bg);
-                border: 1px solid var(--border-color);
-                border-radius: var(--radius);
-                padding: 60px;
-                text-align: center;
-                box-shadow: var(--shadow);
-            }
-
             h1 {
-                font-size: 5rem;
-                color: white;
-                margin-bottom: 10px;
-                font-weight: normal;
-            }
-
-            p {
                 font-size: 2rem;
-                color: var(--text-secondary);
-                margin-bottom: 40px;
+                margin: 0 0 6px;
             }
-
-            .btn {
-                display: inline-block;
-                text-decoration: none;
-                background: var(--accent-color);
-                color: #12121b;
-                border: none;
-                border-radius: 10px;
-                padding: 12px 36px;
-                cursor: pointer;
-                font-size: 2rem;
-                transition: 0.2s ease;
+            h2 {
+                font-size: 1rem;
+                text-transform: uppercase;
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 8px;
             }
-
-            .btn:hover {
-                transform: translateY(-2px);
-                box-shadow: 0 6px 16px rgba(167, 153, 255, 0.4);
+            .list article {
+                padding: 18px 0;
+                border-bottom: 1px solid var(--border);
             }
-
-            @media (max-width: 768px) {
-                .navbar {
-                    flex-direction: column;
-                    gap: 15px;
-                }
-
-                .nav-links {
-                    gap: 20px;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                }
-
-                .logo {
-                    font-size: 2.8rem;
-                }
-
-                .nav-links a {
-                    font-size: 2rem;
-                }
-
-                h1 {
-                    font-size: 4rem;
-                }
-
-                p {
-                    font-size: 1.8rem;
-                }
-
-                .card {
-                    padding: 40px 25px;
-                }
+            .date {
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+            footer {
+                max-width: 720px;
+                margin: 60px auto 24px;
+                padding: 0 24px;
+                color: var(--muted);
+                font-size: 0.85rem;
+                border-top: 1px solid var(--border);
+                padding-top: 18px;
             }
         </style>
     </head>
-
     <body>
-        <nav class="navbar">
-            <a href="index.html" class="logo">rh3xp</a>
-
-            <ul class="nav-links">
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="cv.html">experience</a></li>
-                <li><a href="#">projects</a></li>
-                <li><a href="#">about</a></li>
-            </ul>
-        </nav>
-
-        <main class="main-content">
-            <div class="container">
-                <div class="card">
-                    <h1>rh3xp</h1>
-                    <p>rabbit hole explorer</p>
-
-                    <button class="btn">enter</button>
-                </div>
+        <nav>
+            <div class="navtop"><a href="index.html">rh3xp</a></div>
+            <div class="links">
+                <a href="blog.html">journal</a>
+                <a href="#">lab</a>
+                <a href="cv.html">cv</a>
+                <a href="#">about</a>
             </div>
+        </nav>
+        <main>
+            <h1>rabbit hole explorer</h1>
+            <p style="color: var(--muted)">AI · Systems · Homelab · Writing</p>
+
+            <section>
+                <h2>Latest</h2>
+                <div class="list">
+                    <article>
+                        <div class="date">2026-07-11</div>
+                        <a href="posts/building-kiln.html"
+                            ><strong>Building Kiln</strong></a
+                        >
+                        <div>Local-first homelab control plane.</div>
+                    </article>
+                    <article>
+                        <div class="date">2026-07-10</div>
+                        <a href="#"><strong>Designing Agentic AI</strong></a>
+                        <div>Notes from building enterprise agents.</div>
+                    </article>
+                </div>
+            </section>
+
+            <section>
+                <h2>Current</h2>
+                <p><strong>Reading</strong> — The Brothers Karamazov</p>
+                <p><strong>Building</strong> — Kiln</p>
+                <p><strong>Learning</strong> — Agentic AI Systems</p>
+            </section>
         </main>
+
+        <footer>
+            <div>Last updated: <span id="ts"></span></div>
+            <div>
+                Latest changes:
+                <a
+                    href="https://github.com/rh3xp/rh3xp.github.io/commits/main/"
+                    target="_blank"
+                >
+                    github.com/rh3xp/rh3xp.github.io/commits/main
+                </a>
+            </div>
+            <div style="margin-top: 10px">
+                "Building in public, one rabbit hole at a time."
+            </div>
+        </footer>
+        <script>
+            document.getElementById("ts").textContent = new Date(
+                document.lastModified,
+            ).toLocaleString();
+        </script>
     </body>
 </html>
