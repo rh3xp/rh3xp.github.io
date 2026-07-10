@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>rh3xp</title>
+        <!-- Google Fonts Links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            /* Soft Dark Theme Variables & Base Styles */
+            :root {
+                --bg-color: #12121b;
+                --card-bg: #1e1e2e;
+                --text-primary: #e2e2f0;
+                --text-secondary: #a5a5ba;
+                --accent-color: #a799ff;
+                --border-color: #2e2e48;
+                --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+                --radius: 12px;
+                --font-family: "Inter", sans-serif;
+                /* Your custom handwritten font rule */
+                --font-handwritten: "Reenie Beanie", cursive;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: var(--bg-color);
+                color: var(--text-primary);
+                font-family: var(--font-family);
+                line-height: 1.6;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+            .reenie-beanie-regular {
+                font-family: "Reenie Beanie", cursive;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            /* Soft Navigation Bar */
+            .navbar {
+                background-color: rgba(30, 30, 46, 0.8);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border-color);
+                padding: 8px 24px; /* Reduced vertical padding for better cursive fit */
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
+            /* Custom Font applied to Logo */
+            .logo {
+                font-family: var(--font-handwritten);
+                font-weight: 400;
+                font-size: 2.2rem; /* Larger font size since Reenie Beanie runs thin */
+                color: var(--accent-color);
+                text-decoration: none;
+                line-height: 1;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 28px;
+                list-style: none;
+                align-items: center;
+            }
+
+            /* Custom Font applied to Nav Links */
+            .nav-links a {
+                font-family: var(--font-handwritten);
+                color: var(--text-secondary);
+                text-decoration: none;
+                font-size: 1.8rem; /* Sized up for visual balance */
+                font-weight: 400;
+                transition:
+                    color 0.2s ease,
+                    transform 0.2s ease;
+                display: inline-block;
+            }
+
+            .nav-links a:hover {
+                color: #ffffff;
+                transform: rotate(-2deg); /* Soft organic hover wiggle */
+            }
+
+            /* Main Content Layout */
+            .main-content {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 40px 20px;
+            }
+
+            .container {
+                max-width: 600px;
+                width: 100%;
+            }
+
+            .card {
+                background-color: var(--card-bg);
+                border: 1px solid var(--border-color);
+                border-radius: var(--radius);
+                padding: 40px;
+                box-shadow: var(--shadow);
+                text-align: center;
+            }
+
+            /* Typography */
+            h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                margin-bottom: 16px;
+                color: #ffffff;
+                letter-spacing: -0.5px;
+            }
+
+            p {
+                color: var(--text-secondary);
+                margin-bottom: 32px;
+                font-size: 1.05rem;
+            }
+
+            /* Soft Button */
+            .btn {
+                display: inline-block;
+                background-color: var(--accent-color);
+                color: #12121b;
+                padding: 14px 28px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 600;
+                transition:
+                    transform 0.2s ease,
+                    box-shadow 0.2s ease;
+                border: none;
+                cursor: pointer;
+                font-family: var(--font-family);
+            }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(167, 153, 255, 0.4);
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Soft Navigation Bar -->
+        <nav class="navbar">
+            <a href="#" class="logo">rh3xp</a>
+            <ul class="nav-links">
+                <li><a href="blog.html">blog</a></li>
+                <li><a href="#">experience</a></li>
+                <li><a href="#">projects</a></li>
+                <li><a href="#">about</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="container">
+                <div class="card">
+                    <h1>rh3xp</h1>
+                    <p>rabbithole explorer</p>
+                    <button class="btn"></button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
