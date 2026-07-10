@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>rh3xp</title>
-        <!-- Google Fonts Links -->
+
+        <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -13,7 +14,6 @@
         />
 
         <style>
-            /* Soft Dark Theme Variables & Base Styles */
             :root {
                 --bg-color: #12121b;
                 --card-bg: #1e1e2e;
@@ -23,82 +23,70 @@
                 --border-color: #2e2e48;
                 --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
                 --radius: 12px;
-                --font-family: "Inter", sans-serif;
-                /* Your custom handwritten font rule */
-                --font-handwritten: "Reenie Beanie", cursive;
             }
 
             * {
-                box-sizing: border-box;
                 margin: 0;
                 padding: 0;
+                box-sizing: border-box;
+                font-family: "Reenie Beanie", cursive;
             }
 
             body {
-                background-color: var(--bg-color);
+                background: var(--bg-color);
                 color: var(--text-primary);
-                font-family: var(--font-family);
-                line-height: 1.6;
                 min-height: 100vh;
                 display: flex;
                 flex-direction: column;
-            }
-            .reenie-beanie-regular {
-                font-family: "Reenie Beanie", cursive;
-                font-weight: 400;
-                font-style: normal;
+                line-height: 1.5;
             }
 
-            /* Soft Navigation Bar */
+            /* Navbar */
+
             .navbar {
-                background-color: rgba(30, 30, 46, 0.8);
-                backdrop-filter: blur(10px);
+                background: rgba(30, 30, 46, 0.85);
+                backdrop-filter: blur(12px);
                 border-bottom: 1px solid var(--border-color);
-                padding: 8px 24px; /* Reduced vertical padding for better cursive fit */
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 14px 32px;
                 position: sticky;
                 top: 0;
                 z-index: 100;
             }
 
-            /* Custom Font applied to Logo */
             .logo {
-                font-family: var(--font-handwritten);
-                font-weight: 400;
-                font-size: 2.2rem; /* Larger font size since Reenie Beanie runs thin */
-                color: var(--accent-color);
                 text-decoration: none;
-                line-height: 1;
+                color: var(--accent-color);
+                font-size: 3.2rem;
+                transition: 0.2s ease;
+            }
+
+            .logo:hover {
+                color: white;
             }
 
             .nav-links {
                 display: flex;
-                gap: 28px;
                 list-style: none;
-                align-items: center;
+                gap: 30px;
             }
 
-            /* Custom Font applied to Nav Links */
             .nav-links a {
-                font-family: var(--font-handwritten);
-                color: var(--text-secondary);
                 text-decoration: none;
-                font-size: 1.8rem; /* Sized up for visual balance */
-                font-weight: 400;
-                transition:
-                    color 0.2s ease,
-                    transform 0.2s ease;
-                display: inline-block;
+                color: var(--text-secondary);
+                font-size: 2.3rem;
+                transition: 0.2s ease;
             }
 
             .nav-links a:hover {
-                color: #ffffff;
-                transform: rotate(-2deg); /* Soft organic hover wiggle */
+                color: white;
+                transform: rotate(-3deg);
             }
 
-            /* Main Content Layout */
+            /* Main */
+
             .main-content {
                 flex: 1;
                 display: flex;
@@ -108,61 +96,89 @@
             }
 
             .container {
-                max-width: 600px;
                 width: 100%;
+                max-width: 700px;
             }
 
             .card {
-                background-color: var(--card-bg);
+                background: var(--card-bg);
                 border: 1px solid var(--border-color);
                 border-radius: var(--radius);
-                padding: 40px;
-                box-shadow: var(--shadow);
+                padding: 60px;
                 text-align: center;
+                box-shadow: var(--shadow);
             }
 
-            /* Typography */
             h1 {
-                font-size: 2.2rem;
-                font-weight: 700;
-                margin-bottom: 16px;
-                color: #ffffff;
-                letter-spacing: -0.5px;
+                font-size: 5rem;
+                color: white;
+                margin-bottom: 10px;
+                font-weight: normal;
             }
 
             p {
+                font-size: 2rem;
                 color: var(--text-secondary);
-                margin-bottom: 32px;
-                font-size: 1.05rem;
+                margin-bottom: 40px;
             }
 
-            /* Soft Button */
             .btn {
                 display: inline-block;
-                background-color: var(--accent-color);
-                color: #12121b;
-                padding: 14px 28px;
-                border-radius: 8px;
                 text-decoration: none;
-                font-weight: 600;
-                transition:
-                    transform 0.2s ease,
-                    box-shadow 0.2s ease;
+                background: var(--accent-color);
+                color: #12121b;
                 border: none;
+                border-radius: 10px;
+                padding: 12px 36px;
                 cursor: pointer;
-                font-family: var(--font-family);
+                font-size: 2rem;
+                transition: 0.2s ease;
             }
 
             .btn:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(167, 153, 255, 0.4);
+                box-shadow: 0 6px 16px rgba(167, 153, 255, 0.4);
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .nav-links {
+                    gap: 20px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .logo {
+                    font-size: 2.8rem;
+                }
+
+                .nav-links a {
+                    font-size: 2rem;
+                }
+
+                h1 {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                }
+
+                .card {
+                    padding: 40px 25px;
+                }
             }
         </style>
     </head>
+
     <body>
-        <!-- Soft Navigation Bar -->
         <nav class="navbar">
-            <a href="#" class="logo">rh3xp</a>
+            <a href="index.html" class="logo">rh3xp</a>
+
             <ul class="nav-links">
                 <li><a href="blog.html">blog</a></li>
                 <li><a href="#">experience</a></li>
@@ -171,13 +187,13 @@
             </ul>
         </nav>
 
-        <!-- Main Content Area -->
         <main class="main-content">
             <div class="container">
                 <div class="card">
                     <h1>rh3xp</h1>
-                    <p>rabbithole explorer</p>
-                    <button class="btn"></button>
+                    <p>rabbit hole explorer</p>
+
+                    <button class="btn">enter</button>
                 </div>
             </div>
         </main>

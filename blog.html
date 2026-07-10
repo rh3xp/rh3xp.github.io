@@ -4,16 +4,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>rh3xp - Blog</title>
-        <!-- Google Fonts Links -->
-        <link rel="preconnect" href="https://googleapis.com" />
-        <link rel="preconnect" href="https://gstatic.com" crossorigin />
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Reenie+Beanie&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
             rel="stylesheet"
         />
 
         <style>
-            /* Soft Dark Theme Variables & Base Styles */
             :root {
                 --bg-color: #12121b;
                 --card-bg: #1e1e2e;
@@ -23,160 +23,138 @@
                 --border-color: #2e2e48;
                 --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
                 --radius: 12px;
-                --font-family: "Inter", sans-serif;
-                --font-handwritten: "Reenie Beanie", cursive;
             }
 
             * {
-                box-sizing: border-box;
                 margin: 0;
                 padding: 0;
+                box-sizing: border-box;
+                font-family: "Reenie Beanie", cursive;
             }
 
             body {
-                background-color: var(--bg-color);
+                background: var(--bg-color);
                 color: var(--text-primary);
-                font-family: var(--font-family);
-                line-height: 1.6;
                 min-height: 100vh;
-                display: flex;
-                flex-direction: column;
+                line-height: 1.5;
             }
 
-            .reenie-beanie-regular {
-                font-family: "Reenie Beanie", cursive;
-                font-weight: 400;
-                font-style: normal;
-            }
+            /* ================= NAVBAR ================= */
 
-            /* Soft Navigation Bar */
             .navbar {
-                background-color: rgba(30, 30, 46, 0.8);
-                backdrop-filter: blur(10px);
+                background: rgba(30, 30, 46, 0.85);
+                backdrop-filter: blur(12px);
                 border-bottom: 1px solid var(--border-color);
-                padding: 8px 24px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding: 14px 32px;
                 position: sticky;
                 top: 0;
                 z-index: 100;
             }
 
             .logo {
-                font-family: var(--font-handwritten);
-                font-weight: 400;
-                font-size: 2.2rem;
-                color: var(--accent-color);
                 text-decoration: none;
-                line-height: 1;
+                color: var(--accent-color);
+                font-size: 3.2rem;
+                transition: 0.2s;
+            }
+
+            .logo:hover {
+                color: white;
             }
 
             .nav-links {
                 display: flex;
-                gap: 28px;
                 list-style: none;
-                align-items: center;
+                gap: 30px;
             }
 
             .nav-links a {
-                font-family: var(--font-handwritten);
-                color: var(--text-secondary);
                 text-decoration: none;
-                font-size: 1.8rem;
-                font-weight: 400;
-                transition:
-                    color 0.2s ease,
-                    transform 0.2s ease;
-                display: inline-block;
+                color: var(--text-secondary);
+                font-size: 2.3rem;
+                transition: 0.2s ease;
             }
 
             .nav-links a:hover {
-                color: #ffffff;
-                transform: rotate(-2deg);
+                color: white;
+                transform: rotate(-3deg);
             }
 
-            /* Layout Container */
+            /* ================= MAIN ================= */
+
             .main-content {
-                flex: 1;
                 max-width: 900px;
-                width: 100%;
-                margin: 0 auto;
-                padding: 50px 20px;
+                margin: auto;
+                padding: 60px 20px;
             }
 
             .page-title {
-                font-size: 2.5rem;
-                font-weight: 700;
+                font-size: 4.5rem;
+                color: white;
                 margin-bottom: 8px;
-                color: #ffffff;
-                letter-spacing: -0.5px;
+                font-weight: normal;
             }
 
             .page-subtitle {
+                font-size: 2rem;
                 color: var(--text-secondary);
-                margin-bottom: 40px;
-                font-size: 1.1rem;
+                margin-bottom: 45px;
             }
 
-            /* Blog Post Feed Grid */
+            /* ================= POSTS ================= */
+
             .blog-grid {
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
             }
 
-            /* Blog Card Element */
             .blog-card {
-                background-color: var(--card-bg);
+                display: block;
+                text-decoration: none;
+                color: inherit;
+                background: var(--card-bg);
                 border: 1px solid var(--border-color);
                 border-radius: var(--radius);
                 padding: 30px;
                 box-shadow: var(--shadow);
-                transition:
-                    transform 0.2s ease,
-                    border-color 0.2s ease;
-                text-decoration: none;
-                color: inherit;
-                display: block;
+                transition: 0.2s ease;
             }
 
             .blog-card:hover {
-                transform: translateY(-2px);
+                transform: translateY(-3px);
                 border-color: var(--accent-color);
             }
 
-            /* Meta tags (Date, Category) */
             .blog-meta {
                 display: flex;
-                gap: 12px;
                 align-items: center;
-                font-size: 0.85rem;
+                gap: 12px;
                 color: var(--accent-color);
+                font-size: 1.6rem;
                 margin-bottom: 12px;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
             }
 
-            .blog-meta .date {
+            .date {
                 color: var(--text-secondary);
             }
 
-            .blog-meta .dot {
-                width: 4px;
-                height: 4px;
-                background-color: var(--border-color);
+            .dot {
+                width: 5px;
+                height: 5px;
                 border-radius: 50%;
+                background: var(--border-color);
             }
 
             .blog-card h2 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                color: #ffffff;
+                font-size: 3rem;
+                color: white;
                 margin-bottom: 10px;
-                letter-spacing: -0.3px;
-                transition: color 0.2s ease;
+                font-weight: normal;
+                transition: 0.2s;
             }
 
             .blog-card:hover h2 {
@@ -184,71 +162,115 @@
             }
 
             .blog-card p {
+                font-size: 1.9rem;
                 color: var(--text-secondary);
-                font-size: 1rem;
-                line-height: 1.5;
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .nav-links {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 18px;
+                }
+
+                .logo {
+                    font-size: 2.8rem;
+                }
+
+                .nav-links a {
+                    font-size: 2rem;
+                }
+
+                .page-title {
+                    font-size: 3.8rem;
+                }
+
+                .page-subtitle {
+                    font-size: 1.8rem;
+                }
+
+                .blog-card h2 {
+                    font-size: 2.6rem;
+                }
+
+                .blog-card p {
+                    font-size: 1.7rem;
+                }
+
+                .blog-meta {
+                    font-size: 1.4rem;
+                }
             }
         </style>
     </head>
+
     <body>
-        <!-- Navigation Bar -->
         <nav class="navbar">
-            <a href="#" class="logo">rh3xp</a>
+            <a href="index.html" class="logo">rh3xp</a>
+
             <ul class="nav-links">
-                <li><a href="#">mood</a></li>
+                <li><a href="blog.html">blog</a></li>
                 <li><a href="#">experience</a></li>
                 <li><a href="#">projects</a></li>
                 <li><a href="#">about</a></li>
             </ul>
         </nav>
 
-        <!-- Blog List Main Feed -->
         <main class="main-content">
             <h1 class="page-title">thoughts</h1>
+
             <p class="page-subtitle">
                 documenting designs, code, and daily shifts in perspective.
             </p>
 
             <div class="blog-grid">
-                <!-- Post Item 1 -->
                 <a href="#" class="blog-card">
                     <div class="blog-meta">
                         <span>Mood</span>
                         <div class="dot"></div>
                         <span class="date">Oct 14, 2026</span>
                     </div>
+
                     <h2>a soft midnight palette</h2>
+
                     <p>
                         an exploration into choosing softer stark-contrast
                         alternatives.
                     </p>
                 </a>
 
-                <!-- Post Item 2 -->
                 <a href="#" class="blog-card">
                     <div class="blog-meta">
                         <span>Projects</span>
                         <div class="dot"></div>
                         <span class="date">Sep 28, 2026</span>
                     </div>
+
                     <h2>micro-interactions</h2>
+
                     <p>
-                        leveraging simplifies UI adjustments, font, and global
-                        scales.
+                        leveraging simplified UI adjustments, typography, and
+                        global scales.
                     </p>
                 </a>
 
-                <!-- Post Item 3 -->
                 <a href="#" class="blog-card">
                     <div class="blog-meta">
                         <span>Experience</span>
                         <div class="dot"></div>
                         <span class="date">Aug 03, 2026</span>
                     </div>
+
                     <h2>lessons learned</h2>
+
                     <p>
-                        striking the perfect visual balance in the robust
-                        standards when achieving high-performance.
+                        striking the perfect balance between thoughtful design
+                        and performance.
                     </p>
                 </a>
             </div>
