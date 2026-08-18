@@ -1,152 +1,1101 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>rh3xp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Parth Krishna</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+
         <style>
             :root {
-                --bg: #0d0d0d;
-                --panel: #141414;
-                --fg: #d6d6d6;
-                --muted: #8a8a8a;
-                --border: #252525;
-                --accent: #9fc6ff;
+                --site-color-primary: #0f63fa;
+                --site-color-secondary: #ebebeb;
+                --site-color-neutral: #171717;
+                --site-text-on-primary: #ffffff;
+                --site-text-on-secondary: #171717;
+                --site-text-on-neutral: #ffffff;
+                --site-font-heading: "Figtree", ui-sans-serif, system-ui, sans-serif;
+                --site-font-body: "Figtree", ui-sans-serif, system-ui, sans-serif;
+                --site-font-button: "Figtree", ui-sans-serif, system-ui, sans-serif;
+                --site-bg-color: #ffffff;
+                --site-button-radius: 8px;
+                --site-card-radius: 8px;
+                --site-card-inner-radius: 6px;
+                --site-card-inner-bg-color: color-mix(in srgb, var(--site-color-secondary) 40%, transparent);
             }
-            * {
-                box-sizing: border-box;
-            }
+
+            html,
             body {
                 margin: 0;
-                background: var(--bg);
-                color: var(--fg);
-                font-family: "IBM Plex Mono", monospace;
-                line-height: 1.7;
+                background-color: var(--site-bg-color);
+                color: var(--site-color-neutral);
+                font-family: var(--site-font-body);
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
             }
             a {
-                color: var(--accent);
+                color: inherit;
+            }
+            .message_content a {
+                color: var(--site-color-primary);
+                font-weight: 500;
+            }
+
+            .site-card {
+                border: 1px solid var(--site-color-secondary);
+                border-radius: var(--site-card-radius);
+                background-color: var(--site-card-inner-bg-color);
+                padding: 0.875rem;
+                transition: all 0.2s;
+            }
+            @media (min-width: 640px) {
+                .site-card {
+                    padding: 1.25rem;
+                }
+            }
+
+            .pro-profile {
+                color: var(--site-color-neutral);
+                font-family: var(--site-font-body);
+            }
+            .pro-section-heading {
+                font-family: var(--site-font-heading);
+                font-weight: 500;
+                font-size: 1.0625rem;
+                line-height: 1.4;
+                color: inherit;
+            }
+            .pro-highlights-box {
+                margin-top: 0.5rem;
+                padding: 0 0.75rem;
+                border: 1px solid var(--site-color-secondary);
+                border-radius: var(--site-card-inner-radius);
+            }
+            .pro-highlight-row {
+                padding: 0.5rem 0;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                opacity: 0.9;
+                border-bottom: 1px solid var(--site-color-secondary);
+                word-break: break-word;
+            }
+            .pro-highlight-row:last-child {
+                border-bottom: none;
+            }
+            .pro-action-link {
+                display: inline-flex;
+                align-items: center;
+                height: 51px;
+                overflow-y: hidden;
+                flex-shrink: 0;
                 text-decoration: none;
             }
-            a:hover {
-                text-decoration: underline;
+            .pro-action-outer {
+                border: 1px solid transparent;
+                border-radius: var(--site-button-radius);
+                transition: all 0.2s;
             }
-            nav {
-                max-width: 720px;
-                margin: 0 auto;
-                padding: 28px 24px 16px;
-                border-bottom: 1px solid var(--border);
+            .pro-action-outer:hover {
+                opacity: 0.9;
             }
-            .navtop {
-                font-size: 1.4rem;
-                margin-bottom: 12px;
-            }
-            .links {
+            .pro-action-btn {
                 display: flex;
-                gap: 20px;
-                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                padding: 0.625rem 1rem;
+                font-family: var(--site-font-button);
+                font-size: 0.875rem;
+                font-weight: 600;
+                line-height: 1.25rem;
+                white-space: nowrap;
+                border: 1px solid transparent;
+                border-bottom-width: 4px;
+                border-radius: var(--site-button-radius);
+                cursor: pointer;
+                transition: all 0.2s;
             }
-            main {
-                max-width: 720px;
-                margin: 0 auto;
-                padding: 36px 24px;
+            .pro-action-outer:hover .pro-action-btn {
+                border-bottom-width: 1px;
             }
-            section {
-                margin: 36px 0;
+            .pro-btn-primary {
+                color: var(--site-text-on-primary);
+                background-color: var(--site-color-primary);
+                border-bottom-color: var(--site-color-primary);
             }
-            h1 {
-                font-size: 2rem;
-                margin: 0 0 6px;
+            .pro-btn-secondary {
+                color: var(--site-color-neutral);
+                background-color: transparent;
+                border-color: var(--site-color-secondary);
+                border-bottom-color: var(--site-color-secondary);
             }
-            h2 {
-                font-size: 1rem;
-                text-transform: uppercase;
-                border-bottom: 1px solid var(--border);
-                padding-bottom: 8px;
+            .pro-icon-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                height: fit-content;
+                color: var(--site-color-neutral);
+                background-color: transparent;
+                border: 1px solid var(--site-color-secondary);
+                border-radius: var(--site-button-radius);
+                text-decoration: none;
+                transition: opacity 0.2s;
             }
-            .list article {
-                padding: 18px 0;
-                border-bottom: 1px solid var(--border);
+            .pro-icon-btn:hover {
+                opacity: 0.9;
             }
-            .date {
-                color: var(--muted);
-                font-size: 0.9rem;
+            .pro-icon-btn-sm {
+                padding: 0.25rem;
+                border-bottom-width: 4px;
+                height: fit-content;
+                box-sizing: border-box;
             }
-            footer {
-                max-width: 720px;
-                margin: 60px auto 24px;
-                padding: 0 24px;
-                color: var(--muted);
-                font-size: 0.85rem;
-                border-top: 1px solid var(--border);
-                padding-top: 18px;
+            .pro-nav {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 5.75rem;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                pointer-events: none;
+                transition: bottom 0.2s ease;
+            }
+            .pro-nav.pro-nav--raised {
+                bottom: 9rem;
+            }
+            .pro-nav-inner {
+                background: rgba(255, 255, 255, 0.55);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+                border-color: color-mix(in srgb, var(--site-color-secondary) 75%, transparent);
+
+                pointer-events: auto;
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+                padding: 0.25rem;
+                border: 1px solid var(--site-color-secondary);
+                border-radius: 9999px;
+                backdrop-filter: blur(12px);
+                overflow-x: auto;
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .pro-nav-inner::-webkit-scrollbar {
+                display: none;
+            }
+            .pro-nav-btn {
+                flex-shrink: 0;
+                padding: 0.375rem 0.75rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                text-transform: capitalize;
+                white-space: nowrap;
+                border-radius: 9999px;
+                border: none;
+                background: transparent;
+                color: inherit;
+                cursor: pointer;
+                opacity: 0.8;
+            }
+            .pro-nav-btn.is-active {
+                opacity: 1;
+                background-color: color-mix(in srgb, var(--site-color-neutral) 5%, transparent);
+            }
+            .pro-nav-btn:hover {
+                opacity: 1;
+            }
+            .text_opacity_80 {
+                opacity: 0.8;
+            }
+            .text_opacity_90 {
+                opacity: 0.9;
+            }
+            .color_inherit {
+                color: inherit;
+            }
+            #about,
+            #work,
+            #education,
+            #languages,
+            #certificates,
+            #skills,
+            #projects,
+            #references,
+            #publications,
+            #volunteer,
+            #embeds {
+                width: calc(100% - 48px);
+                max-width: 850px;
+                box-sizing: border-box;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            @media (max-width: 640px) {
+                #about,
+                #work,
+                #education,
+                #languages,
+                #certificates,
+                #skills,
+                #projects,
+                #references,
+                #publications,
+                #volunteer,
+                #embeds {
+                    width: 100%;
+                }
+            }
+
+            .profile-inner {
+                width: calc(100% - 48px);
+                max-width: 850px;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 16px;
+                padding-right: 16px;
+                box-sizing: border-box;
+            }
+
+            /* Keep the header aligned exactly with the main content columns. */
+            #basics .profile-inner {
+                width: calc(100% - 48px);
+                max-width: 850px;
+            }
+
+            @media (max-width: 640px) {
+                .profile-inner,
+                #basics .profile-inner {
+                    width: 100%;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+            }
+
+            /* Theme toggle */
+            .theme-toggle {
+                position: fixed;
+                top: 18px;
+                right: 18px;
+                z-index: 50;
+                width: 38px;
+                height: 38px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid var(--site-color-secondary);
+                border-radius: 9999px;
+                background: color-mix(in srgb, var(--site-bg-color) 72%, transparent);
+                color: var(--site-color-neutral);
+                backdrop-filter: blur(14px) saturate(140%);
+                -webkit-backdrop-filter: blur(14px) saturate(140%);
+                box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+                cursor: pointer;
+                transition:
+                    background-color 0.25s ease,
+                    color 0.25s ease,
+                    border-color 0.25s ease,
+                    transform 0.2s ease;
+            }
+
+            .theme-toggle:hover {
+                transform: translateY(-1px);
+            }
+
+            .theme-toggle svg {
+                width: 17px;
+                height: 17px;
+            }
+
+            html[data-theme="light"] {
+                color-scheme: light;
+            }
+
+            html[data-theme="light"] body {
+                background: #ffffff;
+                color: #171717;
+            }
+
+            /* Dark theme */
+            html[data-theme="dark"] {
+                --site-color-primary: #6ea8ff;
+                --site-color-secondary: #363636;
+                --site-color-neutral: #eeeeee;
+                --site-text-on-primary: #ffffff;
+                --site-text-on-secondary: #eeeeee;
+                --site-text-on-neutral: #ffffff;
+                --site-bg-color: #111111;
+                --site-card-inner-bg-color: color-mix(in srgb, #2a2a2a 62%, transparent);
+                color-scheme: dark;
+            }
+
+            html[data-theme="dark"] body {
+                background: #111111;
+                color: #eeeeee;
+            }
+
+            html[data-theme="dark"] .site-card {
+                background-color: #1b1b1b;
+                border-color: #343434;
+            }
+
+            html[data-theme="dark"] .pro-highlights-box {
+                border-color: #343434;
+            }
+
+            html[data-theme="dark"] .pro-highlight-row {
+                border-color: #343434;
+            }
+
+            html[data-theme="dark"] .pro-icon-btn {
+                background-color: #171717;
+                border-color: #383838;
+                color: #eeeeee;
+            }
+
+            html[data-theme="dark"] .pro-nav-inner {
+                background: rgba(28, 28, 28, 0.72) !important;
+                border-color: rgba(255, 255, 255, 0.14);
+                box-shadow:
+                    0 10px 35px rgba(0, 0, 0, 0.38),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            }
+
+            html[data-theme="dark"] .pro-nav-btn {
+                color: #eeeeee;
+            }
+
+            html[data-theme="dark"] .pro-nav-btn.is-active {
+                background-color: rgba(255, 255, 255, 0.1);
+            }
+
+            html[data-theme="dark"] .theme-toggle {
+                background: rgba(28, 28, 28, 0.78);
+                border-color: rgba(255, 255, 255, 0.16);
+                color: #eeeeee;
+                box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+            }
+
+            html[data-theme="dark"] .message_content a {
+                color: #6ea8ff;
+            }
+
+            html[data-theme="dark"] .glass-nav::before {
+                background: linear-gradient(
+                    115deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.03) 35%,
+                    rgba(255, 255, 255, 0.13) 50%,
+                    rgba(255, 255, 255, 0.03) 65%,
+                    transparent 100%
+                );
+            }
+
+            .glass-nav {
+                position: relative;
+                isolation: isolate;
+                animation: nav-float 4s ease-in-out infinite;
+            }
+
+            .glass-nav::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
+                pointer-events: none;
+                background: linear-gradient(
+                    115deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.18) 35%,
+                    rgba(255, 255, 255, 0.42) 50%,
+                    rgba(255, 255, 255, 0.18) 65%,
+                    transparent 100%
+                );
+                background-size: 220% 100%;
+                animation: nav-shimmer 5s ease-in-out infinite;
+                z-index: -1;
+            }
+
+            @keyframes nav-float {
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-2px);
+                }
+            }
+
+            @keyframes nav-shimmer {
+                0% {
+                    background-position: 200% 0;
+                    opacity: 0.25;
+                }
+                45%,
+                60% {
+                    background-position: 0% 0;
+                    opacity: 0.55;
+                }
+                100% {
+                    background-position: -200% 0;
+                    opacity: 0.25;
+                }
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .glass-nav,
+                .glass-nav::before {
+                    animation: none;
+                }
+            }
+
+            strong,
+            b,
+            .font-semibold,
+            .font-bold {
+                font-weight: 600 !important;
+            }
+            .pro-highlight-row strong {
+                font-weight: 600 !important;
             }
         </style>
     </head>
-    <body>
-        <nav>
-            <div class="navtop"><a href="index.html">rh3xp</a></div>
-            <div class="links">
-                <a href="blog.html">journal</a>
-                <a href="#">lab</a>
-                <a href="cv.html">cv</a>
-                <a href="#">about</a>
-            </div>
-        </nav>
-        <main>
-            <h1>rabbit hole explorer</h1>
-            <p style="color: var(--muted)">AI · Systems · Homelab · Writing</p>
 
-            <section>
-                <h2>Latest</h2>
-                <div class="list">
-                    <article>
-                        <div class="date">2026-07-11</div>
-                        <a href="posts/building-kiln.html"
-                            ><strong>Building Kiln</strong></a
+    <body>
+        <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+        >
+            <svg
+                id="theme-icon-sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path
+                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                ></path>
+            </svg>
+            <svg
+                id="theme-icon-moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                style="display: none"
+            >
+                <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"></path>
+            </svg>
+        </button>
+
+        <main class="pro-profile relative z-[1] pb-56">
+            <section id="basics" class="section pt-10">
+                <div id="contact">
+                    <div class="profile-inner">
+                        <h1 class="color_inherit text-2xl! font-semibold" style="font-family: var(--site-font-heading)">
+                            Parth Krishna
+                        </h1>
+
+                        <h2 class="color_inherit text_opacity_80 mt-2 font-medium! text-base!">
+                            Senior Associate - Agentic AI
+                        </h2>
+
+                        <address class="color_inherit text_opacity_80 mt-2 font-medium not-italic text-[15px]!">
+                            Noida, India
+                        </address>
+                    </div>
+
+                    <div class="profile-inner mt-3 flex flex-wrap items-center gap-2">
+                        <a
+                            href="https://linkedin.com/in/parthkrishna/"
+                            class="pro-icon-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
                         >
-                        <div>Local-first homelab control plane.</div>
+                            <span aria-hidden="true" class="inline-flex">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    x="0px"
+                                    y="0px"
+                                    width="20"
+                                    height="20"
+                                    viewBox="0 0 50 50"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+                                    ></path>
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a
+                            href="mailto:parthkrishna1998@gmail.com"
+                            class="pro-icon-btn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Email"
+                        >
+                            <span aria-hidden="true" class="inline-flex">
+                                <svg
+                                    viewBox="0 0 512 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M256 352c-16.53 0-33.06-5.422-47.16-16.41L0 173.2V400C0 426.5 21.49 448 48 448h416c26.51 0 48-21.49 48-48V173.2l-208.8 162.5C289.1 346.6 272.5 352 256 352zM16.29 145.3l212.2 165.1c16.19 12.6 38.87 12.6 55.06 0l212.2-165.1C505.1 137.3 512 125 512 112C512 85.49 490.5 64 464 64h-416C21.49 64 0 85.49 0 112C0 125 6.01 137.3 16.29 145.3z"
+                                    />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section m-auto mt-10 px-3 sm:px-4 max-w-3xl">
+                <h2 class="pro-section-heading">About</h2>
+
+                Techno-functional Sr. Associate with 5+ years of experience bridging business requirements and technical
+                delivery across AI, automation, and analytics. Currently driving Agentic AI initiatives by designing
+                intelligent agent architectures and translating complex client requirements into working AI-powered
+                solutions.
+                <br />
+                <br />
+                Experienced across the end-to-end solution lifecycle and skilled in Microsoft Power Platform, Python,
+                and Generative AI, with deep consulting exposure to global clients in Operations, Finance, Healthcare,
+                and ESG.
+            </section>
+
+            <section id="work" class="section m-auto mt-10 px-3 sm:px-4 max-w-3xl">
+                <h2 class="pro-section-heading">Work</h2>
+                <div class="space-y-3 mt-3">
+                    <article class="site-card">
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex flex-wrap items-center gap-x-1.5">
+                                <h3 class="color_inherit font-semibold! text-base! leading-snug!">PwC</h3>
+
+                                <span class="color_inherit text_opacity_90 text-base!">|</span>
+                                <p class="color_inherit text_opacity_90 text-sm! leading-snug!">Senior Associate</p>
+                            </div>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1">Noida, Uttar Pradesh, India</p>
+                        <div class="flex gap-1.5 mt-2">
+                            <time class="color_inherit text_opacity_90 text-sm!">Sep 2025</time
+                            ><span class="color_inherit text_opacity_90 text-sm!">→</span>
+                            <time class="color_inherit text_opacity_90 text-sm!">Present</time>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="color_inherit text_opacity_80 font-medium text-sm!">Summary</p>
+                            <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                                Led the development and deployment of AI-powered solutions and platforms, optimizing
+                                operational efficiency and accelerating delivery for global clients.
+                            </p>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="color_inherit text_opacity_80 font-medium text-sm!">Highlights</p>
+                            <div class="pro-highlights-box">
+                                <p class="pro-highlight-row color_inherit">
+                                    Engineered a <strong>Global Leadership AI Agent Control Tower</strong> in Microsoft
+                                    PowerApps Suite, governing <strong>20+ deployed AI agents</strong> and reducing
+                                    agent oversight effort by <strong>40%</strong> while improving leadership response
+                                    to escalations by <strong>60%</strong>.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Delivered an <strong>AI-powered Finance Insights platform</strong>, automating
+                                    end-to-end workflows and saving an estimated <strong>200 FTE hours/month</strong>,
+                                    reducing invoice resolution TAT by <strong>65%</strong> in the AR function.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Orchestrated requirement-gathering workshops with
+                                    <strong>8+ global stakeholders</strong>, authoring BRDs and functional
+                                    specifications for agentic solutions and accelerating solution delivery timelines by
+                                    <strong>30%</strong>.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Conducted technical design reviews, identifying an average of
+                                    <strong>5–7 functional gaps per release</strong> pre-development, and supported UAT
+                                    for <strong>3 major deployments</strong> with zero critical post-go-live defects.
+                                </p>
+                            </div>
+                        </div>
                     </article>
-                    <article>
-                        <div class="date">2026-07-10</div>
-                        <a href="#"><strong>Designing Agentic AI</strong></a>
-                        <div>Notes from building enterprise agents.</div>
+
+                    <article class="site-card">
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex flex-wrap items-center gap-x-1.5">
+                                <h3 class="color_inherit font-semibold! text-base! leading-snug!">Genpact</h3>
+
+                                <span class="color_inherit text_opacity_90 text-base!">|</span>
+                                <p class="color_inherit text_opacity_90 text-sm! leading-snug!">Business Analyst</p>
+                            </div>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1">Gurugram, Haryana, India</p>
+                        <div class="flex gap-1.5 mt-2">
+                            <time class="color_inherit text_opacity_90 text-sm!">Dec 2022</time
+                            ><span class="color_inherit text_opacity_90 text-sm!">→</span>
+                            <time class="color_inherit text_opacity_90 text-sm!">Sep 2025</time>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="color_inherit text_opacity_80 font-medium text-sm!">Summary</p>
+                            <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                                Spearheaded digital transformation and process optimization initiatives for global
+                                clients, leveraging Microsoft Power Platform, Python, Tableau and analytics to deliver
+                                automation and BI solutions.
+                            </p>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="color_inherit text_opacity_80 font-medium text-sm!">Highlights</p>
+                            <div class="pro-highlights-box">
+                                <p class="pro-highlight-row color_inherit">
+                                    Drove operations analytics initiatives for <strong>NAM and LATAM clients</strong>,
+                                    using process automation to improve data integrity, reduce human error and increase
+                                    operational efficiency.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Boosted process efficiency by <strong>98%</strong> through a global bi-lingual MS
+                                    Power Platform solution, integrating approval workflows and KPI dashboards for
+                                    enhanced decision-making.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Implemented a <strong>Microsoft PowerApps solution</strong> integrating triggered
+                                    workflows and <strong>AI Builder Sentiment Analysis</strong>, generating more than
+                                    <strong>$40,000 in business impact</strong> through improved BI capabilities.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Automated reporting and data workflows using <strong>Python</strong>, improving TAT
+                                    by <strong>96%</strong> and streamlining data ingestion and datasource refresh
+                                    across multiple sources.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Developed versatile Python-based automation solutions using
+                                    <strong>Lean Six Sigma</strong> principles, enabling timely datasource refresh and
+                                    failure notifications while helping regional leaders identify impacted dashboards
+                                    and address aging issues.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Developed <strong>Predictive Analytics and NLP-based ML models</strong> to forecast
+                                    resource utilization and future trends, including a Python web application with
+                                    interactive dashboards to support decision-making and prospect analysis.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="site-card">
+                        <div class="flex justify-between items-start gap-2">
+                            <div class="flex flex-wrap items-center gap-x-1.5">
+                                <h3 class="color_inherit font-semibold! text-base! leading-snug!">Genpact</h3>
+
+                                <span class="color_inherit text_opacity_90 text-base!">|</span>
+                                <p class="color_inherit text_opacity_90 text-sm! leading-snug!">Senior Associate</p>
+                            </div>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1">Gurugram, Haryana, India</p>
+                        <div class="flex gap-1.5 mt-2">
+                            <time class="color_inherit text_opacity_90 text-sm!">Feb 2021</time
+                            ><span class="color_inherit text_opacity_90 text-sm!">→</span>
+                            <time class="color_inherit text_opacity_90 text-sm!">Nov 2022</time>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="color_inherit text_opacity_80 font-medium text-sm!">Summary</p>
+                            <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                                Optimized Procure-to-Pay and operations processes for the EMEA region, developing
+                                Python-based data quality, forecasting and workflow solutions to improve operational
+                                efficiency and decision-making.
+                            </p>
+                        </div>
+
+                        <div class="mt-3">
+                            <p class="color_inherit text_opacity_80 font-medium text-sm!">Highlights</p>
+                            <div class="pro-highlights-box">
+                                <p class="pro-highlight-row color_inherit">
+                                    Supported <strong>EMEA Manufacturing Operations</strong> across inventory, order
+                                    management and Procure-to-Pay workflows, improving
+                                    <strong>On-Time Delivery by 22%</strong> through process and workflow optimization.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Engineered
+                                    <strong>ServiceNow workflows, KPI frameworks and forecasting models</strong> by
+                                    analyzing inventory and operational data using Python.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Designed and implemented a
+                                    <strong>Python-based Data Quality framework</strong> tailored to client
+                                    requirements, incorporating forecasting and
+                                    <strong>Retrieval-Augmented Generation (RAG)</strong> capabilities.
+                                </p>
+                                <p class="pro-highlight-row color_inherit">
+                                    Automated data validation and forecast analysis, enabling more efficient planning
+                                    and natural-language access to operational insights.
+                                </p>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </section>
 
-            <section>
-                <h2>Current</h2>
-                <p><strong>Reading</strong> — The Brothers Karamazov</p>
-                <p><strong>Building</strong> — Kiln</p>
-                <p><strong>Learning</strong> — Agentic AI Systems</p>
+            <section id="education" class="section m-auto mt-10 px-3 sm:px-4 max-w-3xl">
+                <h2 class="pro-section-heading">Education</h2>
+                <div class="space-y-3 mt-3">
+                    <article class="site-card">
+                        <div class="flex justify-between items-center gap-x-1.5">
+                            <h3 class="color_inherit font-semibold! text-base! leading-snug!">PES University</h3>
+                        </div>
+
+                        <div class="color_inherit text_opacity_90 text-sm! mb-1 mt-1">Bengaluru, Karnataka, India</div>
+                        <div class="flex gap-1.5">
+                            <time class="color_inherit text_opacity_90 text-sm!">Jan 2016</time
+                            ><span class="color_inherit text_opacity_90 text-sm!">→</span>
+                            <time class="color_inherit text_opacity_90 text-sm!">Dec 2020</time>
+                        </div>
+                        <div class="flex items-center flex-wrap gap-x-1.5 gap-y-0.5 mt-1">
+                            <span class="color_inherit text_opacity_90 text-sm!">B.Tech</span>
+                            <span class="bg-[#525866] w-1 h-1 rounded-full inline-block"></span
+                            ><span class="color_inherit text_opacity_90 text-sm!">Computer Science</span>
+                        </div>
+
+                        <p class="color_inherit text_opacity_80 mt-5 font-medium text-sm!">Courses</p>
+                        <div class="pro-highlights-box">
+                            <p class="pro-highlight-row color_inherit">
+                                Specialisation in Systems Design and Algorithms
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="languages" class="section m-auto mt-10 px-3 sm:px-4 max-w-3xl">
+                <h2 class="pro-section-heading">Languages</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-semibold! text-base! leading-snug!">English</h3>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="certificates" class="section m-auto mt-10 px-3 sm:px-4 max-w-xl">
+                <h2 class="pro-section-heading">Certificates</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-medium! text-base! leading-snug!">Dataiku Core Designer</h3>
+
+                            <a
+                                href="https://verify.skilljar.com/c/qspnonb4udvn"
+                                class="pro-icon-btn pro-icon-btn-sm shrink-0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Open link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5M10.5 13.5 21 3m0 0h-5.25M21 3v5.25"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1"><time>Apr 2024</time></p>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm!">Dataiku</p>
+                    </article>
+
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-medium! text-base! leading-snug!">Dataiku ML Practitioner</h3>
+
+                            <a
+                                href="https://verify.skilljar.com/c/3jxvmyr6opis"
+                                class="pro-icon-btn pro-icon-btn-sm shrink-0"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Open link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5M10.5 13.5 21 3m0 0h-5.25M21 3v5.25"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1"><time>Apr 2024</time></p>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm!">Dataiku</p>
+                    </article>
+
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-medium! text-base! leading-snug!">
+                                Six Sigma Lean Certified
+                            </h3>
+                        </div>
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1"><time>Jan 2023</time></p>
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm!">Genpact</p>
+                    </article>
+
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-medium! text-base! leading-snug!">
+                                Lean Green Belt Certified
+                            </h3>
+                        </div>
+                        <p class="color_inherit text_opacity_90 text-sm! mt-1"><time>Jan 2023</time></p>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm!">Genpact</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="skills" class="section m-auto mt-10 px-3 sm:px-4 max-w-3xl">
+                <h2 class="pro-section-heading">Skills</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-semibold! text-base! leading-snug!">Techno-Functional</h3>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                            Business Requirements Gathering, Process Gap Analysis, Transformation Design, Technical
+                            Design Review.
+                        </p>
+                    </article>
+
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-semibold! text-base! leading-snug!">Agentic AI & GenAI</h3>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                            AI Builder & LLM Orchestration, Agent Design & Multi-Agent Workflows, RAG, Chatbots.
+                        </p>
+                    </article>
+
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-semibold! text-base! leading-snug!">Delivery Frameworks</h3>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                            Agile, Scrum, Lean Six Sigma.
+                        </p>
+                    </article>
+
+                    <article class="site-card h-full">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="color_inherit font-semibold! text-base! leading-snug!">Platform & Tools</h3>
+                        </div>
+
+                        <p class="color_inherit text_opacity_90 mt-0.5 text-sm! wrap-break-word">
+                            Microsoft Power Platform (PowerApps, Power Automate, PowerBI), Python, SQL, API & CI/CD, MS
+                            Visio, Git, Linux.
+                        </p>
+                    </article>
+                </div>
             </section>
         </main>
 
-        <footer>
-            <div>Last updated: <span id="ts"></span></div>
-            <div>
-                Latest changes:
-                <a
-                    href="https://github.com/rh3xp/rh3xp.github.io/commits/main/"
-                    target="_blank"
-                >
-                    github.com/rh3xp/rh3xp.github.io/commits/main
-                </a>
+        <nav class="pro-nav m-auto px-3 sm:px-4 w-screen max-w-3xl" aria-label="Profile sections" data-pro-nav>
+            <div class="pro-nav-inner bg-white/5 glass-nav">
+                <button type="button" class="pro-nav-btn is-active" data-pro-nav-to="home">Home</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="about">About</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="work">Work</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="education">Education</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="languages">Languages</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="certificates">Certificates</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="skills">Skills</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="projects">Projects</button>
+
+                <button type="button" class="pro-nav-btn" data-pro-nav-to="references">References</button>
             </div>
-            <div style="margin-top: 10px">
-                "Building in public, one rabbit hole at a time."
-            </div>
-        </footer>
+        </nav>
+
         <script>
-            document.getElementById("ts").textContent = new Date(
-                document.lastModified,
-            ).toLocaleString();
+            (function () {
+                var root = document.documentElement;
+                var toggle = document.getElementById("theme-toggle");
+                var sun = document.getElementById("theme-icon-sun");
+                var moon = document.getElementById("theme-icon-moon");
+
+                if (!toggle) return;
+
+                function applyTheme(theme, save) {
+                    var dark = theme === "dark";
+
+                    root.setAttribute("data-theme", dark ? "dark" : "light");
+                    root.style.colorScheme = dark ? "dark" : "light";
+
+                    if (sun) sun.style.display = dark ? "none" : "block";
+                    if (moon) moon.style.display = dark ? "block" : "none";
+
+                    toggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+                    toggle.setAttribute("title", dark ? "Switch to light mode" : "Switch to dark mode");
+
+                    if (save) {
+                        try {
+                            localStorage.setItem("profile-theme", dark ? "dark" : "light");
+                        } catch (e) {}
+                    }
+                }
+
+                var savedTheme = null;
+
+                try {
+                    savedTheme = localStorage.getItem("profile-theme");
+                } catch (e) {}
+
+                var initialTheme = savedTheme;
+
+                if (initialTheme !== "dark" && initialTheme !== "light") {
+                    try {
+                        initialTheme =
+                            window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+                                ? "dark"
+                                : "light";
+                    } catch (e) {
+                        initialTheme = "light";
+                    }
+                }
+
+                applyTheme(initialTheme, false);
+
+                toggle.addEventListener("click", function () {
+                    var current = root.getAttribute("data-theme");
+                    applyTheme(current === "dark" ? "light" : "dark", true);
+                });
+            })();
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <script>
+            (function () {
+                var nav = document.querySelector("[data-pro-nav]");
+                if (!nav) return;
+
+                var buttons = nav.querySelectorAll("[data-pro-nav-to]");
+                var scrollContainer = document.getElementById("template-scroll-container") || window;
+
+                function setActive(to) {
+                    buttons.forEach(function (btn) {
+                        btn.classList.toggle("is-active", btn.getAttribute("data-pro-nav-to") === to);
+                    });
+                }
+
+                function scrollToSection(to) {
+                    if (to === "home") {
+                        if (scrollContainer === window) {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        } else {
+                            scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                        setActive("home");
+                        return;
+                    }
+                    var el = document.getElementById(to);
+                    if (el) {
+                        el.scrollIntoView({ behavior: "smooth", block: "start" });
+                        setActive(to);
+                    }
+                }
+
+                function updateNavBottom() {
+                    var distanceFromBottom;
+
+                    if (scrollContainer === window) {
+                        var doc = document.documentElement;
+                        distanceFromBottom = doc.scrollHeight - window.scrollY - window.innerHeight;
+                    } else {
+                        distanceFromBottom =
+                            scrollContainer.scrollHeight - scrollContainer.scrollTop - scrollContainer.clientHeight;
+                    }
+
+                    nav.classList.toggle("pro-nav--raised", distanceFromBottom <= 100);
+                }
+
+                buttons.forEach(function (btn) {
+                    btn.addEventListener("click", function () {
+                        scrollToSection(btn.getAttribute("data-pro-nav-to"));
+                    });
+                });
+
+                var throttleMs = 100;
+                var lastRun = 0;
+                function onScroll() {
+                    var now = Date.now();
+                    if (now - lastRun < throttleMs) return;
+                    lastRun = now;
+
+                    updateNavBottom();
+
+                    var active = "home";
+                    var activeOffset = 140;
+                    buttons.forEach(function (btn) {
+                        var to = btn.getAttribute("data-pro-nav-to");
+                        if (to === "home") return;
+                        var section = document.getElementById(to);
+                        if (!section) return;
+                        if (section.getBoundingClientRect().top <= activeOffset) {
+                            active = to;
+                        }
+                    });
+                    setActive(active);
+                }
+
+                scrollContainer.addEventListener("scroll", onScroll, { passive: true });
+                updateNavBottom();
+                onScroll();
+            })();
         </script>
     </body>
 </html>
